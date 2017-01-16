@@ -15,7 +15,7 @@ class Solution {
       int end = x;
       while (start + 1 < end) {
          int mid = start + (end - start) / 2;
-         if (mid * mid == x) {
+         if (mid == x / mid) {
             return mid;
          } else {
             // to avoid overflow
@@ -26,9 +26,7 @@ class Solution {
             }
          }
       }
-      if (end * end <= x && end >= x) {
-         return end;
-      }
+
       return start;
    }
 }
