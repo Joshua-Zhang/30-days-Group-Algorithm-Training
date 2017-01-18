@@ -6,8 +6,7 @@ class Solution:
     # @author: Egbert Li
     def divide(self, dividend, divisor):
         INT_MAX = 2147483647
-        a = dividend > 0 ? dividend : -dividend
-        b = divisor > 0 ? divisor : -divisor
+        a, b = abs(a), abs(b)
         result, shift = 0, 31
         while shift >= 0:
             if a >= (b << shift):
